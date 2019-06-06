@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.EmailSingInActivy"
+    tools:showIn="@layout/activity_email_sing_in_activy">
+
+    <TextView
+        android:layout_marginBottom="30dp"
+        android:id="@+id/textView2"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inicio de sesion con correo"
+        android:textAllCaps="false"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilCorreo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuario o correo" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilContraseña"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        style="@style/Widget.MaterialComponents.Button"
+        android:id="@+id/btnLoginEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar sesion" />
+
+    <TextView
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Olvide la contraseña" />
+
+    <TextView
+        android:textColor="@color/secondaryColor"
+        android:layout_marginStart="4dp"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aun no te registras? Registrate ahora" />
+</LinearLayout>

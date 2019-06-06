@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.TutorialActivity"
+    tools:showIn="@layout/activity_tutorial">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        //Omitir
+
+        <TextView
+            android:id="@+id/contenttutorial_textBtnOmitir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingTop="24dp"
+            android:paddingRight="16dp"
+            android:text="Omitir"
+            android:textAllCaps="false"
+            android:textColor="@color/secondaryColor" />
+        //Titulo
+
+        <TextView
+            android:id="@+id/tutorial_tvTitle"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/contenttutorial_textBtnOmitir"
+            android:padding="16dp"
+            android:text="Conoce sobre nuestra aplicacion"
+            android:textColor="@color/secondaryTextColor"
+            android:textStyle="bold" />
+        //Card Info
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardInfo"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tutorial_tvTitle"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="3dp"
+            android:animateLayoutChanges="false"
+            android:animationCache="false"
+            android:minHeight="120dp"
+            app:cardBackgroundColor="#80D8FF"
+            app:cardMaxElevation="3dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="info"
+                            android:textAlignment="viewStart"
+                            android:textAllCaps="true"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="4dp"
+                            android:text="Title"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="80dp"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Body"/>
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        //Card Video
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardVideo"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/cardInfo"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="3dp"
+            android:animateLayoutChanges="false"
+            android:animationCache="false"
+            android:minHeight="120dp"
+            app:cardBackgroundColor="@color/primaryDarkColor"
+            app:cardMaxElevation="3dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textColor="@color/primaryLightColor"
+                            android:id="@+id/textView102"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="info"
+                            android:textAlignment="viewStart"
+                            android:textAllCaps="true"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:textColor="@color/primaryLightColor"
+                            android:id="@+id/textView122"
+                            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="4dp"
+                            android:text="Title"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="80dp"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                    <TextView
+                        android:textColor="@color/primaryLightColor"
+                        android:id="@+id/textView142"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Body"/>
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
