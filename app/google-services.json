@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "323760486919",
+    "firebase_url": "https://saywithpics.firebaseio.com",
+    "project_id": "saywithpics",
+    "storage_bucket": "saywithpics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323760486919:android:ab0b1a3f4e206e7b",
+        "android_client_info": {
+          "package_name": "com.soulone.saywithpics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323760486919-p8seokb22fnh5gohqqa9pa8kmsotsil6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.soulone.saywithpics",
+            "certificate_hash": "8b0fe4d38cc3b10732067143c6348ca4e092d23e"
+          }
+        },
+        {
+          "client_id": "323760486919-4js2lg4pgtnpp54ddqj913h2poatrv1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMbYR_y6sWb7AriQG_euB_RJ05eGar3sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323760486919-4js2lg4pgtnpp54ddqj913h2poatrv1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

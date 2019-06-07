@@ -13,7 +13,7 @@
 
     <TextView
         android:layout_marginBottom="30dp"
-        android:id="@+id/textView2"
+        android:id="@+id/Title"
         style="@style/TextAppearance.MaterialComponents.Headline5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,9 +28,10 @@
         android:layout_height="match_parent">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/singin_edtCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Usuario o correo" />
+            android:hint="Correo" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -40,33 +41,36 @@
         android:layout_height="match_parent">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/singin_edtContraseña"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
-            />
+            android:inputType="textPassword" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
         style="@style/Widget.MaterialComponents.Button"
-        android:id="@+id/btnLoginEmail"
+        android:id="@+id/btnSubmitSingin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Iniciar sesion" />
 
     <TextView
+        android:clickable="true"
         android:layout_marginStart="4dp"
         android:layout_marginTop="12dp"
         style="@style/TextAppearance.MaterialComponents.Caption"
-        android:id="@+id/textView3"
+        android:id="@+id/linkgotoForgotPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Olvide la contraseña" />
 
     <TextView
+        android:clickable="true"
         android:textColor="@color/secondaryColor"
         android:layout_marginStart="4dp"
         style="@style/TextAppearance.MaterialComponents.Caption"
-        android:id="@+id/textView4"
+        android:id="@+id/linkGotoRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Aun no te registras? Registrate ahora" />

@@ -26,7 +26,7 @@
             android:id="@+id/tab_all"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_twotone_ballot_24px"
+            android:icon="@drawable/ic_twotone_access_time_24px"
             android:text="Todas" />
 
         <android.support.design.widget.TabItem

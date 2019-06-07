@@ -26,9 +26,10 @@ import com.soulone.saywithpics.R;
 public class RutinasActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private TabLayout  mtablayout;
-    private int[]tabIcons={R.drawable.ic_twotone_ballot_24px,R.drawable.ic_twotone_archive_24px};
-    private String[]tabText={"Rutinas","Archivados"};
+    private TabLayout mtablayout;
+    private int[] tabIcons = {R.drawable.ic_twotone_access_time_24px, R.drawable.ic_twotone_archive_24px};
+    private String[] tabText = {"Rutinas", "Archivados"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,13 +42,8 @@ public class RutinasActivity extends AppCompatActivity
         tabSet();
 
 
-
-
-
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Mis rutinas");
-
-
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -68,31 +64,31 @@ public class RutinasActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    private void tabSet(){
-        for (int i=0 ;i<2;i++){
+    private void tabSet() {
+        for (int i = 0; i < 2; i++) {
             mtablayout.getTabAt(i).setIcon(tabIcons[i]);
             mtablayout.getTabAt(i).setText(tabText[i]);
         }
     }
 
-    private void loadViewPager(ViewPager viewPager){
+    private void loadViewPager(ViewPager viewPager) {
         RutinasAdapter rutinasAdapter = new RutinasAdapter(getSupportFragmentManager());
         rutinasAdapter.addFragment(newIntanceRutinas("Todas"));
         rutinasAdapter.addFragment(newIntanceArchivados("Archivados"));
         viewPager.setAdapter(rutinasAdapter);
     }
 
-    private AllRutinas newIntanceRutinas(String title){
-        Bundle bundle =  new Bundle();
-        bundle.putString("title",title);
+    private AllRutinas newIntanceRutinas(String title) {
+        Bundle bundle = new Bundle();
+        bundle.putString("title", title);
         AllRutinas fragment = new AllRutinas();
         fragment.setArguments(bundle);
         return fragment;
     }
 
-    private ArchivadoRutinas newIntanceArchivados(String title){
-        Bundle bundle =  new Bundle();
-        bundle.putString("title",title);
+    private ArchivadoRutinas newIntanceArchivados(String title) {
+        Bundle bundle = new Bundle();
+        bundle.putString("title", title);
         ArchivadoRutinas fragment = new ArchivadoRutinas();
         fragment.setArguments(bundle);
         return fragment;
@@ -137,13 +133,7 @@ public class RutinasActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_tools) {
+        if (id == R.id.nav_tutorial) {
 
         } else if (id == R.id.nav_share_app) {
 
