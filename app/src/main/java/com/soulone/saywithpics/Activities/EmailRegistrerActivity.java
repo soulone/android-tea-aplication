@@ -88,6 +88,8 @@ public class EmailRegistrerActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(EmailRegistrerActivity.this, "Cuenta creada exitosamente", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(EmailRegistrerActivity.this,EmailSingInActivy.class);
+                    startActivity(intent);
                 }else {
                     Toast.makeText(EmailRegistrerActivity.this, "Un error a ocurrido :(", Toast.LENGTH_SHORT).show();
                 }
@@ -95,4 +97,15 @@ public class EmailRegistrerActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        firebaseAuth.addAuthStateListener(authStateListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        firebaseAuth.removeAuthStateListener(authStateListener);
+    }
 }
