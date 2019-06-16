@@ -17,6 +17,7 @@ public class RoutineDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_routine_detail);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Actividades");
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
