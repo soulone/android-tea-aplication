@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 import com.soulone.saywithpics.R;
 
-public class ArchivadoRutinas  extends Fragment {
+public class ArchivedRoutines extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.rutinas_archived_fragment,container,false);
+        return inflater.inflate(R.layout.archived_routines_fragment,container,false);
     }
 }

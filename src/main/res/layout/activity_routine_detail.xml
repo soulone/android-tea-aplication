@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.RutinasActivity">
+    tools:context=".Activities.RoutineDetailActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -13,9 +13,6 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            app:theme="@style/AppTheme.AppBarOverlay"
-            android:backgroundTint="@color/cardview_light_background"
-            app:titleTextAppearance="@style/AppTheme.PopupOverlay"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
@@ -23,16 +20,14 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_rutinas" />
+    <include layout="@layout/content_routine_detail" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fabCrearRutina"
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:maxImageSize="@dimen/fabiconsize_normal"
-        app:tint="@color/secondaryDarkColor"
-        app:srcCompat="@drawable/ic_twotone_add_box_24px" />
+        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </android.support.design.widget.CoordinatorLayout>

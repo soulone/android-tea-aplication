@@ -23,7 +23,7 @@ public class AllRutinas  extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.rutinas_all_fragment,container,false);
+        View view = inflater.inflate(R.layout.all_routines_fragment,container,false);
         RecyclerView recyclerViewRutina = (RecyclerView)view.findViewById(R.id.rv_allRutinas);
 
 
@@ -33,8 +33,8 @@ public class AllRutinas  extends Fragment {
         recyclerViewRutina.setLayoutManager(linearLayoutManager);
 
         RutinaAdapter rutinaAdapter =
-                new RutinaAdapter(buildRutina(),R.layout.item_rutina,getActivity());
-        recyclerViewRutina.setAdapter(rutinaAdapter);
+                new RutinaAdapter(buildRutina(),R.layout.item_routine,getActivity());
+                 recyclerViewRutina.setAdapter(rutinaAdapter);
 
         return view;
 
@@ -45,6 +45,15 @@ public class AllRutinas  extends Fragment {
         rutina.add(new Rutina(1,"Rutina de los domingos"));
         rutina.add(new Rutina(2,"Rutina de los lunes"));
         rutina.add(new Rutina(3,"Rutina del colegio"));
+        rutina.add(new Rutina(4,"Rutina de los domingos"));
+        rutina.add(new Rutina(5,"Rutina de los lunes"));
+        rutina.add(new Rutina(6,"Rutina del colegio"));
+        rutina.add(new Rutina(7,"Rutina de los domingos"));
+        rutina.add(new Rutina(8,"Rutina de los lunes"));
+        rutina.add(new Rutina(9,"Rutina del colegio"));
+        rutina.add(new Rutina(10,"Rutina de los domingos"));
+        rutina.add(new Rutina(11,"Rutina de los lunes"));
+        rutina.add(new Rutina(12,"Rutina del colegio"));
         return rutina;
     }
 }

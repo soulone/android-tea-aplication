@@ -90,13 +90,11 @@ auth.sendPasswordResetEmail(emailAddres)
     private void irEmailRegistro() {
         Intent intent = new Intent(this, EmailRegistrerActivity.class);
         startActivity(intent);
-        finish();
     }
 
     private void irEmailInicioSesion() {
         Intent intent = new Intent(this, EmailSingInActivy.class);
         startActivity(intent);
-        finish();
     }
 
 

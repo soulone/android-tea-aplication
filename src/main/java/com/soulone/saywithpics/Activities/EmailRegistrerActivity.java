@@ -55,7 +55,11 @@ public class EmailRegistrerActivity extends AppCompatActivity {
         btnRegistrerEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registerEmail(edtCorreo.getText().toString(),edtPass.getText().toString());
+                if (edtCorreo.getText().toString().isEmpty() && edtPass.getText().toString().isEmpty()) {
+                    Toast.makeText(EmailRegistrerActivity.this, "Por favor rellene todos los campos", Toast.LENGTH_SHORT).show();
+                } else {
+                    registerEmail(edtCorreo.getText().toString(), edtPass.getText().toString());
+                }
             }
         });
 

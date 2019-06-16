@@ -10,7 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activities.RutinasActivity"
+            android:name=".Activities.RoutineDetailActivity"
+            android:label="@string/title_activity_routine_detail"
+            android:parentActivityName=".Activities.RoutinesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.soulone.saywithpics.Activities.RoutinesActivity" />
+        </activity>
+        <activity android:name=".Fragments.GrupoActividades" />
+        <activity
+            android:name=".Activities.RoutinesActivity"
             android:label="@string/title_activity_rutinas"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

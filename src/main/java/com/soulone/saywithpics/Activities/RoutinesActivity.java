@@ -7,8 +7,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -22,19 +20,15 @@ import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.soulone.saywithpics.Adapters.RutinaAdapter;
-import com.soulone.saywithpics.Fragments.CreateRutinasDialog;
+import com.soulone.saywithpics.Fragments.ArchivedRoutines;
+import com.soulone.saywithpics.Fragments.RoutinesCreateDialog;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.soulone.saywithpics.Adapters.PagerAdapter;
 import com.soulone.saywithpics.Fragments.AllRutinas;
-import com.soulone.saywithpics.Fragments.ArchivadoRutinas;
-import com.soulone.saywithpics.Models.Rutina;
 import com.soulone.saywithpics.R;
 
-import java.util.ArrayList;
-
-public class RutinasActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener ,CreateRutinasDialog.CreatRutinasDialogListener
+public class RoutinesActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener , RoutinesCreateDialog.CreatRutinasDialogListener
 {
 
     //TAG
@@ -54,7 +48,7 @@ public class RutinasActivity extends AppCompatActivity implements NavigationView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rutinas);
+        setContentView(R.layout.activity_routines);
         TextView textViewRutinaName         = findViewById(R.id.textViewRutinaName);
         Toolbar toolbar                     = findViewById(R.id.toolbar);
         ViewPager viewPager                 = findViewById(R.id.viewpager);
@@ -83,7 +77,8 @@ public class RutinasActivity extends AppCompatActivity implements NavigationView
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                crearNuevaRutina();
+                Intent intent = new Intent(RoutinesActivity.this, RoutineDetailActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -95,8 +90,8 @@ public class RutinasActivity extends AppCompatActivity implements NavigationView
         navigationView.setNavigationItemSelectedListener(this);
     }
     private void crearNuevaRutina() {
-        CreateRutinasDialog createRutinasDialog =  new CreateRutinasDialog();
-        createRutinasDialog.show(getSupportFragmentManager(),"Dialog Rutinas");
+        RoutinesCreateDialog routinesCreateDialog =  new RoutinesCreateDialog();
+        routinesCreateDialog.show(getSupportFragmentManager(),"Dialog Rutinas");
     }
     @Override
     public void applyNombre(String nombre) {
@@ -127,10 +122,10 @@ public class RutinasActivity extends AppCompatActivity implements NavigationView
         return fragment;
     }
     //Cargando las instancias de Archivados(Rutinas)
-    private ArchivadoRutinas newIntanceArchivados(String title) {
+    private ArchivedRoutines newIntanceArchivados(String title) {
         Bundle bundle = new Bundle();
         bundle.putString("title", title);
-        ArchivadoRutinas fragment = new ArchivadoRutinas();
+        ArchivedRoutines fragment = new ArchivedRoutines();
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -173,7 +168,7 @@ public class RutinasActivity extends AppCompatActivity implements NavigationView
         int id = item.getItemId();
 
         if (id == R.id.nav_tutorial) {
-            Intent intent = new Intent(RutinasActivity.this,TutorialActivity.class);
+            Intent intent = new Intent(RoutinesActivity.this,TutorialActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_share_app) {

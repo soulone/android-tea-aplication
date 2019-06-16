@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,10 +35,12 @@ public class EmailSingInActivy extends AppCompatActivity {
         setContentView(R.layout.activity_email_sing_in_activy);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        FloatingActionButton fab = findViewById(R.id.fabCrearRutina);
         Button btnLoginEmail = findViewById(R.id.btnSubmitSingin);
+        TextView tvOlvideContraseña = findViewById(R.id.linkgotoForgotPassword);
+        TextView tvCrearCuenta = findViewById(R.id.linkGotoRegister);
         final EditText edtCorreo = findViewById(R.id.singin_edtCorreo);
         final EditText edtContraseña = findViewById(R.id.singin_edtContraseña);
-        FloatingActionButton fab = findViewById(R.id.fabCrearRutina);
 
 
         //Config Toolbar
@@ -48,19 +51,39 @@ public class EmailSingInActivy extends AppCompatActivity {
 
         //Programaticamente
 
+        //LinkGotoRegister
+        tvCrearCuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EmailSingInActivy.this,EmailRegistrerActivity.class);
+                startActivity(intent);
+            }
+        });
+        //LinkForgotPassword
+        tvOlvideContraseña.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(EmailSingInActivy.this, "Proximamente", Toast.LENGTH_SHORT).show();
+            }
+        });
+        //FAB Setting Help
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Si necesita ayuda puede llamar a soporte al +51 990969198", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
 
+        //Boton Login Setting
         btnLoginEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LoginEmail(edtCorreo.getText().toString(), edtContraseña.getText().toString());
-
+                if(edtContraseña.getText().toString().isEmpty() && edtContraseña.getText().toString().isEmpty()){
+                    Toast.makeText(EmailSingInActivy.this, "Sus credenciales no son correctos", Toast.LENGTH_SHORT).show();
+                }else {
+                    LoginEmail(edtCorreo.getText().toString(), edtContraseña.getText().toString());
+                }
             }
         });
     }

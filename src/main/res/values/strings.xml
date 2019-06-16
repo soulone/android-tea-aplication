@@ -119,4 +119,11 @@
     <string name="str_aceptar">Aceptar</string>
     <string name="strcrear_nueva_rutina">Crear nueva rutina</string>
     <string name="stringrese_un_nombre_para_la_rutina">Ingrese un nombre para la rutina</string>
+    <string name="title_activity_referencia">ReferenciaActivity</string>
+    <string name="title_activity_actividades">ActividadesActivity</string>
+    <string name="title_activity_rutina_detail">RutinaDetailActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_routine_detail">RoutineDetailActivity</string>
 </resources>

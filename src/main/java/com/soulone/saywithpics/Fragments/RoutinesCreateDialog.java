@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 import com.soulone.saywithpics.R;
 
-public class CreateRutinasDialog extends AppCompatDialogFragment {
+public class RoutinesCreateDialog extends AppCompatDialogFragment {
 
     private EditText etNombreRutina;
     private CreatRutinasDialogListener listener;
@@ -21,7 +21,7 @@ public class CreateRutinasDialog extends AppCompatDialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater= getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.modal_nombre_rutina,null);
+        View view = inflater.inflate(R.layout.modal_name_routine,null);
         builder.setView(view)
                 .setTitle("Crear nueva rutina")
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

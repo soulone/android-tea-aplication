@@ -70,7 +70,7 @@ public class TutorialActivity extends AppCompatActivity {
     }
 
     private void irRutinas() {
-        Intent intent = new Intent(this,RutinasActivity.class);
+        Intent intent = new Intent(this, RoutinesActivity.class);
         startActivity(intent);
         finish();
     }
