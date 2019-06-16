@@ -4,11 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -21,27 +19,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.soulone.saywithpics.Adapters.RutinasAdapter;
+import com.soulone.saywithpics.Adapters.RutinaAdapter;
 import com.soulone.saywithpics.Fragments.CreateRutinasDialog;
-import com.soulone.saywithpics.Interfaces.ConfiguracionRetrofit;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.soulone.saywithpics.Adapters.RutinasPagerAdapter;
+import com.soulone.saywithpics.Adapters.PagerAdapter;
 import com.soulone.saywithpics.Fragments.AllRutinas;
 import com.soulone.saywithpics.Fragments.ArchivadoRutinas;
 import com.soulone.saywithpics.Models.Rutina;
 import com.soulone.saywithpics.R;
 
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import java.util.ArrayList;
 
 public class RutinasActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener ,CreateRutinasDialog.CreatRutinasDialogListener
 {
@@ -49,8 +40,7 @@ public class RutinasActivity extends AppCompatActivity implements NavigationView
     //TAG
     private static final String TAG ="Rutinas Activity" ;
 
-    //RecyclerView
-    private RecyclerView recyclerView;
+
     //TabLayout
     private TabLayout mtablayout;
     private int[] tabIcons = {R.drawable.ic_twotone_access_time_24px, R.drawable.ic_twotone_archive_24px};
@@ -59,21 +49,23 @@ public class RutinasActivity extends AppCompatActivity implements NavigationView
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
 
-
     //[Funciones y metodos]
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rutinas);
-        TextView textViewRutinaName     = findViewById(R.id.textViewRutinaName);
-        recyclerView                    = findViewById(R.id.my_recycler_view);
-        Toolbar toolbar                 = findViewById(R.id.toolbar);
-        ViewPager viewPager             = findViewById(R.id.viewpager);
-        FloatingActionButton fab        = findViewById(R.id.fabCrearRutina);
-        mtablayout                      = findViewById(R.id.tabLayout);
-        DrawerLayout drawer             = findViewById(R.id.drawer_layout);
-        NavigationView navigationView   = findViewById(R.id.nav_view);
+        TextView textViewRutinaName         = findViewById(R.id.textViewRutinaName);
+        Toolbar toolbar                     = findViewById(R.id.toolbar);
+        ViewPager viewPager                 = findViewById(R.id.viewpager);
+        FloatingActionButton fab            = findViewById(R.id.fabCrearRutina);
+        mtablayout                          = findViewById(R.id.tabLayout);
+        DrawerLayout drawer                 = findViewById(R.id.drawer_layout);
+        NavigationView navigationView       = findViewById(R.id.nav_view);
+
+
+
+
 
         //Inicializando Inicialize
         inicialize();
@@ -121,7 +113,7 @@ public class RutinasActivity extends AppCompatActivity implements NavigationView
     }
     //Load los Pager "Setting the titles"
     private void loadViewPager(ViewPager viewPager) {
-        RutinasPagerAdapter rutinasPagerAdapter = new RutinasPagerAdapter(getSupportFragmentManager());
+        PagerAdapter rutinasPagerAdapter = new PagerAdapter(getSupportFragmentManager());
         rutinasPagerAdapter.addFragment(newIntanceRutinas("Todas"));
         rutinasPagerAdapter.addFragment(newIntanceArchivados("Archivados"));
         viewPager.setAdapter(rutinasPagerAdapter);
@@ -213,6 +205,7 @@ public class RutinasActivity extends AppCompatActivity implements NavigationView
             }
         };
     }
+
 
 
 }
