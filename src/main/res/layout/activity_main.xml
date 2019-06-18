@@ -16,29 +16,32 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/TextAppearance.MaterialComponents.Headline3"
-            android:textColor="@color/primaryTextColor"
             android:id="@+id/tvTitle"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/main_tvTitle" />
+            android:text="@string/main_tvTitle"
+            android:textAllCaps="false"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold" />
 
         <TextView
-            style="@style/TextAppearance.MaterialComponents.Overline"
-            android:layout_below="@id/tvTitle"
             android:id="@+id/tvsubtile"
-            android:maxWidth="240dp"
+            style="@style/TextAppearance.MaterialComponents.Overline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/main_tvSubtitle" />
+            android:layout_below="@id/tvTitle"
+            android:maxWidth="240dp"
+            android:text="@string/main_tvSubtitle"
+            android:textAllCaps="false" />
 
         <ImageView
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:id="@+id/ivImagen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars[14]" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@color/colorAccent" />
 
     </RelativeLayout>
 

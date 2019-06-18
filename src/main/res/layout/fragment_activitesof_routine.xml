@@ -7,10 +7,26 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_actividades"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Mis Actividades"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_actividades"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textView"
+            android:padding="8dp"
+            android:visibility="visible" />
+    </RelativeLayout>
 
 </FrameLayout>

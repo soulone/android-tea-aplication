@@ -1,11 +1,16 @@
 package com.soulone.saywithpics.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +26,6 @@ import java.util.ArrayList;
  */
 public class ActivitesofRoutine extends Fragment {
 
-
     public ActivitesofRoutine() {
         // Required empty public constructor
     }
@@ -32,6 +36,7 @@ public class ActivitesofRoutine extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_activitesof_routine, container, false);
         RecyclerView ActividadesRecyclerView = (RecyclerView) view.findViewById(R.id.rv_actividades);
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
@@ -39,9 +44,11 @@ public class ActivitesofRoutine extends Fragment {
 
          ActividadAdapter actividadAdapter =
                  new ActividadAdapter(buildActividad(), R.layout.item_actividad, getActivity());
-                ActividadesRecyclerView.setAdapter(actividadAdapter);
+        ActividadesRecyclerView.setAdapter(actividadAdapter);
+
         return view;
     }
+
 
     public ArrayList<Actividad> buildActividad() {
         ArrayList<Actividad> actividad = new ArrayList<>();

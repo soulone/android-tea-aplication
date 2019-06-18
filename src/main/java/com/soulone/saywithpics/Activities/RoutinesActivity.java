@@ -77,8 +77,7 @@ public class RoutinesActivity extends AppCompatActivity implements NavigationVie
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RoutinesActivity.this, RoutineDetailActivity.class);
-                startActivity(intent);
+
             }
         });
 

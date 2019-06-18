@@ -12,8 +12,8 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            app:theme="@style/AppTheme.AppBarOverlay"
-            android:backgroundTint="@color/colorAccent"
+            app:theme="@style/Theme.MaterialComponents.CompactMenu"
+            android:backgroundTint="@color/cardview_light_background"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
@@ -25,7 +25,7 @@
     <include layout="@layout/content_routine_detail" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabtakepicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
